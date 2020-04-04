@@ -1,0 +1,127 @@
+***TRIANGULAR PYRAMID***
+Point a = new Point(0,0,0);
+Point b = new Point(0,200,0);
+Point c = new Point(200,0,0);
+Point d = new Point(100,100,100);
+
+Line ab = new Line(a,b);
+Line bc = new Line(b,c);
+Line ca = new Line(c,a);
+Line ad = new Line(a,d);
+Line bd = new Line(b,d);
+Line cd = new Line(c,d);
+
+Shape s = new Shape(ab, bc, ca, ad, bd, cd);
+s.draw();
+
+
+***SQUARE PYRAMID CENTERED ON 400***
+Point a = new Point(300,300,0); 
+Point b = new Point(300,500,0);
+Point c = new Point(500,300,0);
+Point d = new Point(500,500,0);
+Point e = new Point(400,400,600);
+
+Line ab = new Line(a,b);
+Line bd = new Line(b,d);
+Line cd = new Line(c,d);
+Line ac = new Line(a,c);
+Line ae = new Line(a,e);
+Line b_inf = new Line(b, new Point (400,400,1000000));
+
+Shape s = new Shape(ab,bd,cd,ac,ae,b_inf);
+s.draw();
+
+***SQUARE***
+Point a = new Point(300,300,0); 
+Point b = new Point(300,500,0);
+Point c = new Point(500,300,0);
+Point d = new Point(500,500,0);
+
+Line ab = new Line(a,b);
+Line bd = new Line(b,d);
+Line cd = new Line(c,d);
+Line ac = new Line(a,c);
+
+***3D CUBE**
+Point a = new Point(300,300,0); 
+Point b = new Point(300,500,0);
+Point c = new Point(500,300,0);
+Point d = new Point(500,500,0);
+Point a1 = new Point(300,300,400); 
+Point b1 = new Point(300,500,400);
+Point c1 = new Point(500,300,400);
+Point d1 = new Point(500,500,400);
+
+Line ab = new Line(a,b);
+Line bd = new Line(b,d);
+Line cd = new Line(c,d);
+Line ac = new Line(a,c);
+Line ab1 = new Line(a1,b1);
+Line bd1 = new Line(b1,d1);
+Line cd1 = new Line(c1,d1);
+Line ac1 = new Line(a1,c1);
+Line as = new Line(a,a1);
+Line bs = new Line(b,b1);
+Line cs = new Line(c,c1);
+Line ds = new Line(d,d1);
+
+Shape s = new Shape(ab,bd,cd,ac,ab1,bd1,cd1,ac1,as,bs,cs,ds);
+s.draw();
+
+***UNIT CUBE***
+Point a = new Point(-1,1,-1);
+Point b = new Point(1,1,-1);
+Point c = new Point(1,-1,-1);
+Point d = new Point(-1,-1,-1);
+Point e = new Point(-1,1,1);
+Point f = new Point(1,1,1);
+Point g = new Point(1,-1,1);
+Point h = new Point(-1,-1,1);
+
+Line ab = new Line(a,b);
+Line bc = new Line(b,c);
+Line cd = new Line(c,d);
+Line da = new Line(d,a);
+Line ef = new Line(e,f);
+Line fg = new Line(f,g);
+Line gh = new Line(g,h);
+Line he = new Line(h,e);
+Line ae = new Line(a,e);
+Line bf = new Line(b,f);
+Line cg = new Line(c,g);
+Line dh = new Line(d,h);
+
+Shape s = new Shape(ab,bc,cd,da,ef,fg,gh,he,ae,bf,cg,dh);
+s.draw();
+
+
+**EXAMPLE CUBE SCALED BY 100**
+viewpoint = new Point(600,800,750);
+Point screenCenter = new Point(300,400,375);
+screen = new Screen(screenCenter,200,200); //empty constructor
+
+Point a = new Point(-100,-100,-100); 
+Point b = new Point(-100,100,-100);
+Point c = new Point(100,-100,-100);
+Point d = new Point(100,100,-100);
+Point a1 = new Point(-100,-100,100); 
+Point b1 = new Point(-100,100,100);
+Point c1 = new Point(100,-100,100);
+Point d1 = new Point(100,100,100);
+
+Line ab = new Line(a,b);
+Line bd = new Line(b,d);
+Line cd = new Line(c,d);
+Line ac = new Line(a,c);
+Line ab1 = new Line(a1,b1);
+Line bd1 = new Line(b1,d1);
+Line cd1 = new Line(c1,d1);
+Line ac1 = new Line(a1,c1);
+Line as = new Line(a,a1);
+Line bs = new Line(b,b1);
+Line cs = new Line(c,c1);
+Line ds = new Line(d,d1);
+
+shape = new Shape(ab,bd,cd,ac,ab1,bd1,cd1,ac1,as,bs,cs,ds);
+shape.draw();
